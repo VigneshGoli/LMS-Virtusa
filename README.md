@@ -156,15 +156,27 @@ CREATE TABLE issued_books (
    ```sql
    CREATE DATABASE library_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
    ```
-2. Update credentials in `backend/src/main/resources/application.yml`:
-   ```yaml
-   spring:
-     datasource:
-       url: jdbc:mysql://localhost:3306/library_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
-       username: YOUR_USERNAME
-       password: YOUR_PASSWORD
+2. Set environment variables for database credentials:
+   ```bash
+   export DB_USERNAME=your_mysql_username
+   export DB_PASSWORD=your_mysql_password
    ```
-3. Optionally run `backend/src/main/resources/schema.sql` manually to precreate tables.
+   Or create a `.env` file in the `backend` directory (add to `.gitignore`):
+   ```
+   DB_USERNAME=your_mysql_username
+   DB_PASSWORD=your_mysql_password
+   ```
+3. For Google OAuth login, set:
+   ```bash
+   export GOOGLE_CLIENT_ID=your_google_client_id
+   export GOOGLE_CLIENT_SECRET=your_google_client_secret
+   ```
+   Or in `.env`:
+   ```
+   GOOGLE_CLIENT_ID=your_google_client_id
+   GOOGLE_CLIENT_SECRET=your_google_client_secret
+   ```
+4. Optionally run `backend/src/main/resources/schema.sql` manually to precreate tables.
 
 ### 2. Run the backend
 
