@@ -1,4 +1,4 @@
-# Online Library Management System
+<img width="1801" height="873" alt="image" src="https://github.com/user-attachments/assets/603cd1d3-7484-4c6b-acb8-36b55470b62b" /># Online Library Management System
 
 A full-stack Online Library Management System demonstrating professional Spring Boot + React engineering practices and core Java concepts (OOP, collections, streams, predicates, custom annotations, Java I/O, and basic threading).
 
@@ -236,4 +236,26 @@ VITE_API_BASE_URL=http://localhost:8080
 - CORS is enabled for `http://localhost:5173` in `WebConfig`.
 - Audit log file is written to `logs/audit.log` relative to the backend working directory.
 - For production, swap `ddl-auto: update` for migrations (e.g., Flyway) and harden logging/exception handling further.
+
+
+<img width="1716" height="850" alt="image" src="https://github.com/user-attachments/assets/2731fe72-14ad-493e-a526-548964f5cef2" />
+
+<img width="1729" height="860" alt="image" src="https://github.com/user-attachments/assets/5df4f704-6ba8-44fc-889e-4624eb2342da" />
+
+<img width="1744" height="876" alt="image" src="https://github.com/user-attachments/assets/4f7892b1-95d5-4d61-9708-5627df058e2d" />
+
+<img width="1771" height="865" alt="image" src="https://github.com/user-attachments/assets/674f9139-36c7-41fb-b92f-4f1d723e6989" />
+
+<img width="675" height="828" alt="image" src="https://github.com/user-attachments/assets/819d94a1-8e18-42e3-8595-ed62e8789819" />
+
+<img width="1776" height="860" alt="image" src="https://github.com/user-attachments/assets/956124d3-dc4c-4902-8bc6-0e759f2bed97" />
+
+<img width="1797" height="860" alt="image" src="https://github.com/user-attachments/assets/cd38beb4-148c-4ef2-8130-f500baddad69" />
+
+<img width="1801" height="873" alt="image" src="https://github.com/user-attachments/assets/fa9e0ce1-2ccc-4d85-80a5-9ecddc583bce" />
+
+<img width="1802" height="880" alt="image" src="https://github.com/user-attachments/assets/2d84bf49-fd0f-4a91-9ad6-62b8b2adfdff" />
+
+
+
 
