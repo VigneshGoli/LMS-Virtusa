@@ -1,8 +1,8 @@
--- Reset tables and auto-increment for repeatable demo runs
-SET FOREIGN_KEY_CHECKS = 0;
-TRUNCATE TABLE issued_books;
-TRUNCATE TABLE books;
-SET FOREIGN_KEY_CHECKS = 1;
+-- Reset tables for repeatable demo runs
+SET session_replication_role = 'replica';
+TRUNCATE TABLE issued_books CASCADE;
+TRUNCATE TABLE books CASCADE;
+SET session_replication_role = 'origin';
 
 INSERT INTO books (title, author, category, isbn, publisher, quantity, year, description, status, created_at, updated_at) VALUES
   ('Clean Code', 'Robert C. Martin', 'Software Engineering', '9780132350884', 'Prentice Hall', 5, 2008, 'A Handbook of Agile Software Craftsmanship.', 'AVAILABLE', NOW(), NOW()),
