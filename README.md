@@ -1,4 +1,4 @@
-<img width="1801" height="873" alt="image" src="https://github.com/user-attachments/assets/603cd1d3-7484-4c6b-acb8-36b55470b62b" /># Online Library Management System
+# Online Library Management System
 
 A full-stack Online Library Management System demonstrating professional Spring Boot + React engineering practices and core Java concepts (OOP, collections, streams, predicates, custom annotations, Java I/O, and basic threading).
 
