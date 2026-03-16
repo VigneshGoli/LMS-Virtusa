@@ -1,8 +1,7 @@
 package com.example.library.model;
 
 import com.example.library.enums.IssueStatus;
-import jakarta.persistence.*;
-
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Entity
@@ -25,6 +24,9 @@ public class IssuedBook extends BaseEntity {
 
     @Column(name = "return_date")
     private LocalDate returnDate;
+
+    @Column(name = "fee", precision = 10, scale = 2)
+    private BigDecimal fee = BigDecimal.ZERO;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
@@ -76,6 +78,14 @@ public class IssuedBook extends BaseEntity {
 
     public void setStatus(IssueStatus status) {
         this.status = status;
+    }
+
+    public BigDecimal getFee() {
+        return fee;
+    }
+
+    public void setFee(BigDecimal fee) {
+        this.fee = fee;
     }
 }
 

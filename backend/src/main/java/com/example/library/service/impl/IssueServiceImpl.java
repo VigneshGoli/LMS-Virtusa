@@ -17,7 +17,9 @@ import com.example.library.service.IssueService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.Optional;
 
@@ -82,6 +84,11 @@ public class IssueServiceImpl implements IssueService {
         book.setStatus(BookStatus.AVAILABLE);
 
         issuedBook.setReturnDate(LocalDate.now());
+        if (issuedBook.getDueDate() != null && issuedBook.getReturnDate().isAfter(issuedBook.getDueDate())) {
+            long daysOverdue = ChronoUnit.DAYS.between(issuedBook.getDueDate(), issuedBook.getReturnDate());
+            BigDecimal dailyFee = new BigDecimal("10.00");
+            issuedBook.setFee(dailyFee.multiply(BigDecimal.valueOf(daysOverdue)));
+        }
         issuedBook.setStatus(IssueStatus.RETURNED);
 
         bookRepository.save(book);
